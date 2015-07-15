@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+    <h3> Agrear un Recurso Cultural </h3>
+   	<div class="card-panel grey lighten-5 z-depth-1">
+        <div class="row valign-wrapper">
+          <div class="col s12">
+            <span class="black-text">
+            {% if error_message %}
+            	<div class="row">
+              		<div class="col m12 red lighten-2">
+              			{{ error_message }}
+              		</div>
+            	</div>
+            {% endif %}
+            	<div class="row">
+            			<div class="col m12">
+            				{% csrf_token %}
+            				{% crispy form %}
+            			</div>
+            	</div>
+            </span>
+          </div>
+        </div>
+	</div>
+	
+{% endblock %}

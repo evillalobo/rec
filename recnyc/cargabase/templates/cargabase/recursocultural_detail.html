@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3> Recurso Cultural {{ object.nombre }} </h3>
+    	
+    	<div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s12">
+              <span class="black-text">
+              <div class="row">
+              <h4>{{ object.nombre}}</h4>
+              <hr>
+                Descripcion:{{ object.descripcion }}<p>
+                Historia: {{ object.historia }}<p>
+                Dirección: {{ object.direccion }}<p>
+                Imagen: {{ object.imagen }}<p>
+                Departamento: {{ object.departamento }}<p>
+                Categoría: {{ object.categoria }}<p>
+                 </div>
+                <div class="right"><a href="{% url 'recursocultural-update' object.id %}" class="waves-effect waves-light btn">Editar</a></div>
+               
+              </span>
+            </div>
+          </div>
+        </div>
+    
+{% endblock %}

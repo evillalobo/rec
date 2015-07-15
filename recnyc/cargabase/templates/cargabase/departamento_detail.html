@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3> Departamento {{ object.nombre }} </h3>
+    	
+    	<div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s12">
+              <span class="black-text">
+              <div class="row">
+              <h4>{{ object.nombre}}</h4>
+              <hr>
+                Descripcion:{{ object.descripcion }}<p>
+                Imagen: {{ object.imagen }}
+                Circuitos: {{ object.circuitos }}
+                 </div>
+                <div class="right"><a href="{% url 'departamento-update' departamento.id %}" class="waves-effect waves-light btn">Editar</a></div>
+               
+              </span>
+            </div>
+          </div>
+        </div>
+    
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3> Recurso Natural {{ object.nombre }} </h3>
+    	
+    	<div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s12">
+              <span class="black-text">
+              <div class="row">
+              <h4>{{ object.nombre}}</h4>
+              <hr>
+                Descripcion:{{ object.descripcion }}<p>
+                Imagen: {{ object.imagen }}
+                Departamento: {{ object.departamento }}
+                Categoria: {{ object.categoria }}
+                 </div>
+                <div class="right"><a href="{% url 'recursonatural-update' object.id %}" class="waves-effect waves-light btn">Editar</a></div>
+               
+              </span>
+            </div>
+          </div>
+        </div>
+    
+{% endblock %}

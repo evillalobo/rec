@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="row">
+    	<div class="col m10"><h3> Lista de Recursos Culturales </h3></div>
+    	<div class="col m2">
+    	<a href="{% url 'recursocultural-add' %}"class="btn-floating btn-large waves-effect waves-light red">
+    		<span class="material-icons">+</span>
+    	</a></div>
+    </div>
+
+    	{% for recursocultural in object_list %}
+        	<div class="card-panel grey lighten-5 z-depth-1">
+          		<div class="row valign-wrapper">
+            		<div class="col s12">
+              			<span class="black-text">
+              				<div class="row">
+                				<a href="{% url 'recursocultural-detail' recursocultural.id %}"><h4>{{ recursocultural.nombre }} >></h4></a>
+                					{{ recursocultural.descripcion }}
+                 			</div>
+                			<div class="right"><a href="{% url 'recursocultural-update' recursocultural.id %}" class="waves-effect waves-light btn">Editar</a></div>
+              			</span>
+               		</div>
+          		</div>
+        	</div>
+		{% endfor %}
+
+    
+{% endblock %}
