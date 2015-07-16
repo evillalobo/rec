@@ -4,7 +4,7 @@
 
 <head>
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="{% static '/static/css/materialize.min.css' %}" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="{% static '/static/css/materialize.css' %}" media="screen,projection" />
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +17,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="{% static '/js/materialize.min.js' %}"></script>
     <!-- Nav -->
-    
+    <header>
         <nav>
             <div class="nav-wrapper blue-grey darken-1">
                 <div class="container">
@@ -25,7 +25,9 @@
                 </div>
             </div>
         </nav>
+    </header>
         <!-- Main -->
+        <main>
         <div class="container">
             <h4>Carga de elementos</h4>
 
@@ -36,12 +38,12 @@
                         <a href="{% url 'categoria-list' %}" class="collection-item">Categorias</a>
                         <a href="{% url 'recursonatural-list' %}" class="collection-item">Recursos Naturales</a>
                         <a href="{% url 'recursocultural-list' %}" class="collection-item">Recursos Culturales</a>
-                        <a href="#!" class="collection-item">Mapa</a>
                     </div>
                 </div>
                 <div class="col s12 m8">{% block content %}{% endblock content %}</div>
             </div>
         </div>
+        </main>
         <!-- Footer -->
         <footer class="page-footer blue-grey darken-1">
             <div class="container">
@@ -51,25 +53,12 @@
                         <p class="grey-text text-lighten-4">UNCa - Facultad de Tecnología y Ciencias Aplicadas</p>
                         <p class="grey-text text-lighten-4">UNCa - Facultad de Humanidades - Dto. de Geografía</p>
                     </div>
-                    <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">Links</h5>
-                        <ul>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a>
-                            </li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a>
-                            </li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a>
-                            </li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a>
-                            </li>
-                        </ul>
-                    </div>
+                    
                 </div>
             </div>
             <div class="footer-copyright">
                 <div class="container">
                     © 2014 Copyright Text
-                    <a class="grey-text text-lighten-4 right" href="#!">Mas Links</a>
                 </div>
             </div>
         </footer>
